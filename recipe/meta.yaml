@@ -1,5 +1,5 @@
 {% set name = "flask-sspi" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-SSPI-{{ version }}.tar.gz
-  sha256: b183ff42ad26c1334855707b8861d3a0292f99959be5d0a67b98fd3a1043e0c7
+  sha256: 1f89609318fd93930dd048c0b5620c4e0db78f110e6bf3002f22e4a453ac6e57
 
 build:
   skip: true  # [not win or py<36]
