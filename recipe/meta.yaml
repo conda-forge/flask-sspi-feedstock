@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [not win or py<36]
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
