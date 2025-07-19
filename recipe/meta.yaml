@@ -1,5 +1,5 @@
 {% set name = "flask-sspi" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 
 package:
@@ -7,18 +7,19 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-SSPI-{{ version }}.tar.gz
-  sha256: 511bbead9c7d757872737f9b05ebf2f38a84e076ca5701767e48e8a185d8532b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6d43c6ec2384846fbd994755237f420ab499ed912e2272fecbd5f875c7789965
 
 build:
   skip: true  # [not win or py<36]
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - flask
     - mock
